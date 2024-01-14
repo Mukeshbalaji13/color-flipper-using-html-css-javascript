@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors on click</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/793d7b86bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="heading"><i class="fa-solid fa-hand-pointer"></i> Colors "on-click"</i></div> <!--Website heading-->
+
+    <div class="main"> <!--main container holding 3 small containers -->
+
+        <div class="container1"> <!-- hexadecimal container -->
+            <div class="hex-box"></div> <!--color changing box of hexadecimal-->
+            <div class="subcontainer1"> <!--subcontainer to hold mini-container-->
+                <div class="hex"> <!--mini container inside the subcontainer to hold name, color-code and button-->
+                    <div class="name1"> <!--name label for hexadecimal tab-->
+                        <h2>Hexadecimal</h2>
+                    </div>
+                    <div class="code1"> <!--color-code label for hexadecimal tab-->
+                        <h2 class="subcode1">#ffffff</h2>
+                    </div>
+                    <div class="button1"> <!--button for flipping color of hexadecimal tab-->
+                        <button id="hexbutton">FLIP ME</button>
+                        <div class="hexcopydiv">
+                        <button id="hexcopy"><i class="fa-regular fa-copy"></i></button>
+                        <p class="hexcopymsg">code copied</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container2"> <!--rgb container -->
+            <div class="rgb-box"></div> <!--color changing box of rgb-->
+            <div class="subcontainer2"> <!--subcontainer to hold mini-container-->
+                <div class="rgb"> <!--mini container inside the subcontainer to hold name, color-code and button-->
+                    <div class="name2"> <!--name label for hexadecimal tab-->
+                        <h2>Red Green Blue(RGB)</h2>
+                    </div>
+                    <div class="code2"> <!--color-code label for rgb tab-->
+                        <h2 class="subcode2">rgb(255, 255, 255)</h2>
+                    </div>
+                    <div class="button2"> <!--button for flipping color of rgb tab-->
+                        <button id="rgbbutton">FLIP ME</button>
+                        <div class="rgbcopydiv">
+                        <button id="rgbcopy"><i class="fa-regular fa-copy"></i></button>
+                        <p class="rgbcopymsg">code copied</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container3"> <!--small container 3 -->
+            <div class="hsl-box"></div> <!--color changing box of hsl-->
+            <div class="subcontainer3"> <!--subcontainer to hold mini-container-->
+                <div class="hsl"> <!--mini container inside the subcontainer to hold name, color-code and button-->
+                    <div class="name3"> <!--name label for hexadecimal tab-->
+                        <h2>Hue Saturation Lightness (HSL)</h2>
+                    </div>
+                    <div class="code3"> <!--color-code label for hexadecimal tab-->
+                        <h2 class="subcode3">hsl(0, 0%, 100%)</h2>
+                    </div>
+                    <div class="button3"> <!--button for flipping color of hexadecimal tab-->
+                        <button id="hslbutton">FLIP ME</button>
+                        <div class="hslcopydiv">
+                        <button id="hslcopy"><i class="fa-regular fa-copy"></i></button>
+                        <p class="hslcopymsg">code copied</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

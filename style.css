@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Kablammo&family=Lilita+One&family=Notable&family=Poppins:wght@800&family=Ruslan+Display&family=Satisfy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* designing the body */
+body{
+    background: linear-gradient(120deg, rgb(148, 0, 211,0.7), rgb(75, 0, 130, 0.7), rgb(0, 0, 255, 0.7), rgb(0, 255, 0, 0.7), rgb(255, 255, 0, 0.5), rgb(	255, 127, 0, 0.5), rgb(	255, 0 , 0, 0.5), rgb(148, 0, 211,0.7), rgb(75, 0, 130, 0.7), rgb(0, 0, 255, 0.7), rgb(0, 255, 0, 0.7), rgb(255, 255, 0, 0.7), rgb(	255, 127, 0, 0.7), rgb(255, 0 , 0, 0.7));
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: 600% 100%;
+    animation: rainbow 30s linear infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes rainbow{
+0%{background-position: 0%}
+100%{background-position: 100%}
+}
+
+/* designing the website heading */
+.heading{
+    text-transform: uppercase;
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
+    font-weight: 900;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%);
+    background: linear-gradient(to left, rgb(148, 0, 211), rgb(16, 255, 227), rgb(0, 0, 255), rgb(0, 111, 0), rgb(255, 255, 0), rgb(	255, 127, 0), rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* designing the main container holding 3 small containers */
+.main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* designing the 3 small containers */
+.container1, .container2, .container3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 190px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+/* designing the 3 color changing boxes */
+.container1 .hex-box, .container2 .rgb-box, .container3 .hsl-box{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    top: -30px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.5s;
+}
+
+/* designing the subcontainer to hold name, code and button */
+.container1 .subcontainer1, .container2 .subcontainer2, .container3 .subcontainer3{
+   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+
+
+
+/* -------------------------------------HEXADECIMAL CONTAINER------------------------------------- */
+
+/* designing the mini container inside the subcontainer to hold name, code and button of hexadecimal */
+.container1 .subcontainer1 .hex{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(150px);
+    transition: 0.5s;
+    align-items: center;
+}
+
+/* designing the name label of hexadecimal*/
+.container1 .subcontainer1 .hex .name1{
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    margin-bottom: -3px;
+    width: 100%;
+}
+
+.container1 .subcontainer1 .hex .code1{
+    width: 75%;
+    margin: 30px 0;
+}
+
+
+/* designing the color-code label of hexadecimal*/
+.container1 .subcontainer1 .hex .subcode1{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    background : rgb(255, 255, 255, 0.5);
+    padding: 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+    width: 100%;
+}
+
+/* designing the button container of hexadecimal*/
+.container1 .subcontainer1 .hex .button1{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* designing the button of hexadecimal*/
+.container1 .subcontainer1 .hex .button1 #hexbutton{
+border: none;
+background-color: rgb(16, 60, 62);
+color: white;
+font-size: 16px;
+padding: 10px;
+width: 200px;
+margin: 0 0 0 73px;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 6px #999999;
+font-family: 'poppins';
+transition: 0.5s;
+}
+
+/* designing the copy button of hexadecimal */
+.container1 .subcontainer1 .hex .button1 #hexcopy{
+background-color: rgb(16, 60, 62);
+border: none;
+border-top-right-radius: 10px;
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+
+/* designing the copy button of hexadecimal */
+.hexcopydiv{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 0 12px;
+    border-top-right-radius: 10px;
+}
+
+/* designing the icon of copy button of hexadecimal */
+.container1 .subcontainer1 .hex .button1 #hexcopy i{
+    font-size: 15px;
+    color: rgba(255, 255, 255);
+}
+
+/* designing the pop-up message of copy button of hexadecimal*/
+.hexcopymsg{
+    background-color: rgb(56, 89, 22);
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 30px;
+    padding: 4px;
+    right: 10px;
+    top: 115px;
+    display: none;
+}
+
+/* designing the small part in pop-up message of hexadecimal*/
+.hexcopymsg::before{
+    content: "";
+    background-color: rgb(56, 89, 22);
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: -3px;
+    left: 30px;
+    transform: rotate(50deg);
+    display: none;
+}
+
+
+/* popping up the copied message on click of rgb */
+.hexcopydiv.active .hexcopymsg,.hexcopydiv.active .hexcopymsg::before{
+    display: block;
+}
+
+
+
+
+/* -------------------------------------RED GREEN BLUE CONTAINER------------------------------------- */
+
+/* designing the mini container inside the subcontainer to hold name, code and button of rgb */
+.container2 .subcontainer2 .rgb{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    transform: translateY(150px);
+    transition: 0.5s;
+}
+
+/* designing the name label of rgb*/
+.container2 .subcontainer2 .rgb .name2{
+    margin: 0px 0;
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    margin-bottom: -3px;
+}
+
+/* designing the color-code label of rgb*/
+.container2 .subcontainer2 .rgb .subcode2{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    background : rgb(255, 255, 255, 0.5);
+    margin: 30px 45px;
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* designing the button container of rgb*/
+.container2 .subcontainer2 .rgb .button2{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* designing the button of rgb*/
+.container2 .subcontainer2 .rgb .button2 #rgbbutton{
+border: none;
+background-color: rgb(16, 60, 62);
+color: white;
+font-size: 16px;
+padding: 10px;
+width: 200px;
+margin: 0 0 0 73px;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 6px #999999;
+font-family: 'poppins';
+transition: 0.5s;
+}
+
+/* designing the copy button of rgb */
+.container2 .subcontainer2 .rgb .button2 #rgbcopy{
+background-color: rgb(16, 60, 62);
+border: none;
+border-top-right-radius: 10px;
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+
+/* designing the copy button of rgb */
+.rgbcopydiv{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 0 12px;
+    border-top-right-radius: 10px;
+}
+
+/* designing the icon of copy button of rgb */
+.container2 .subcontainer2 .rgb .button2 #rgbcopy i{
+    font-size: 15px;
+    color: rgba(255, 255, 255);
+}
+
+/* designing the pop-up message of copy button of rgb*/
+.rgbcopymsg{
+    background-color: rgb(56, 89, 22);
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 30px;
+    padding: 4px;
+    right: 10px;
+    top: 115px;
+    display: none;
+}
+
+/* designing the small part in pop-up message of rgb*/
+.rgbcopymsg::before{
+    content: "";
+    background-color: rgb(56, 89, 22);
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: -3px;
+    left: 30px;
+    transform: rotate(50deg);
+    display: none;
+}
+
+/* popping up the copied message on click of rgb */
+.rgbcopydiv.active .rgbcopymsg,.rgbcopydiv.active .rgbcopymsg::before{
+    display: block;
+}
+
+
+/* -------------------------------------HUE SATURATION LIGHTNESS------------------------------------- */
+
+/* designing the mini container inside the subcontainer to hold name, code and button of hsl */
+.container3 .subcontainer3 .hsl{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    transform: translateY(150px);
+    transition: 0.5s;
+}
+
+/* designing the name label of hsl*/
+.container3 .subcontainer3 .hsl .name3{
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    margin-bottom: -3px;
+    width: 100%;
+    
+}
+
+/* designing the color-code label of hsl*/
+.container3 .subcontainer3 .hsl .subcode3{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'poppins';
+    color: rgb(0, 0, 0);
+    background : rgb(255, 255, 255, 0.5);
+    margin: 30px 45px;
+    padding: 2px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/* designing the button container of hsl*/
+.container3 .subcontainer3 .hsl .button3{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* designing the button of hsl*/
+.container3 .subcontainer3 .hsl .button3 #hslbutton{
+border: none;
+background-color: rgb(16, 60, 62);
+color: white;
+font-size: 16px;
+padding: 10px;
+width: 200px;
+margin: 0 0 0 73px;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 6px #999999;
+font-family: 'poppins';
+transition: 0.5s;
+}
+
+/* designing the copy button of hsl */
+.container3 .subcontainer3 .hsl .button3 #hslcopy{
+    background-color: rgb(16, 60, 62);
+    border: none;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* designing the copy button of hsl */
+.hslcopydiv{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 0 12px;
+    border-top-right-radius: 10px;
+}
+
+/* designing the icon of copy button of hsl */
+.container3 .subcontainer3 .hsl .button3 #hslcopy i{
+    font-size: 15px;
+    color: rgba(255, 255, 255);
+}
+
+/* designing the pop-up message of copy button of hsl*/
+.hslcopymsg{
+    background-color: rgb(56, 89, 22);
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    font-weight: bolder;
+    border-radius: 30px;
+    padding: 4px;
+    right: 10px;
+    top: 115px;
+    display: none;
+}
+
+/* designing the small part in pop-up message of hsl*/
+.hslcopymsg::before{
+    content: "";
+    background-color: rgb(56, 89, 22);
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    bottom: -3px;
+    left: 30px;
+    transform: rotate(50deg);
+    display: none;
+}
+
+/* popping up the copied message on click of hsl*/
+.hslcopydiv.active .hslcopymsg,.hslcopydiv.active .hslcopymsg::before{
+    display: block;
+}
+
+
+
+
+/* -------------------------------------ANIMATION EFFECTS------------------------------------- */
+
+/* Container expand on hover */
+.main .container1:hover, .main .container2:hover, .main .container3:hover{
+    height: 350px;
+}
+
+/* color changing box expand on hover */
+.main .container1:hover .hex-box, 
+.main .container2:hover .rgb-box, 
+.main .container3:hover .hsl-box{
+    width: 300px;
+    height: 180px;
+}
+
+/* change button hover effect */
+.container1 .subcontainer1 .hex .button1 #hexbutton:hover, 
+.container2 .subcontainer2 .rgb .button2 #rgbbutton:hover, 
+.container3 .subcontainer3 .hsl .button3 #hslbutton:hover{
+    background-color: rgb(56, 89, 22);
+    letter-spacing:  3px;
+}
+ 
+/* change button hover effect */
+.container1 .subcontainer1 .hex .button1 #hexbutton:active,
+.container2 .subcontainer2 .rgb .button2 #rgbbutton:active, 
+.container3 .subcontainer3 .hsl .button3 #hslbutton:active{
+    box-shadow: 0 2px #3f3e3e;
+  transform: translateY(5px);
+}
+
+/* copy button hover effect */
+.container1 .subcontainer1 .hex .button1 #hexcopy:hover,
+.container2 .subcontainer2 .rgb .button2 #rgbcopy:hover,
+.container3 .subcontainer3 .hsl .button3 #hslcopy:hover{
+    background-color: rgb(56, 89, 22);
+}
+
+/* copy button hover effect */
+.container1 .subcontainer1 .hex .button1 #hexcopy:hover i,
+.container2 .subcontainer2 .rgb .button2 #rgbcopy:hover i,
+.container3 .subcontainer3 .hsl .button3 #rhslopy:hover i{
+    font-size: 18px;
+}
+
+/* translating the content on hover the container */
+.container1:hover .subcontainer1 .hex, 
+.container2:hover .subcontainer2 .rgb, 
+.container3:hover .subcontainer3 .hsl{
+    transform: translateY(0px);   
+}
+
+/* color changing on selecting the code */
+.subcode1::selection, 
+.subcode2::selection, 
+.subcode3::selection{
+    background-color: rgb(31, 30, 32);
+    color: chartreuse;
+}
